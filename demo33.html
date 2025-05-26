@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>SonicWeave</title>
+    <link rel="stylesheet" href="styles33.css">
+</head>
+<body>
+
+<div class="player">
+    <h2>SonicWeave</h2>
+    
+    <input type="file" id="fileInput" multiple accept="audio/mp3">
+    
+    <audio id="audioPlayer" controls></audio>
+
+    <!-- 搜索栏 -->
+    <input type="text" id="searchBar" placeholder="搜索歌曲..." oninput="filterPlaylist()">
+
+    <div>
+        <button onclick="prevSong()">上一首</button>
+        <button onclick="togglePlayPause()" id="playPauseBtn">播放</button>
+        <button onclick="nextSong()">下一首</button>
+        <!-- 语音识别按钮 -->
+        <button class="speech-btn" onclick="startSpeechRecognition()">🎙️ 语音搜索</button>
+        <!-- 手势提示按钮 -->
+        <button class="gesture-btn" disabled>✋ 手势控制 (需额外支持)</button>
+    </div>
+
+    <h3>播放列表</h3>
+    <ul id="playlist"></ul>
+    
+    <label class="file-label" for="fileInput">选择本地音乐</label>
+  <input type="file" id="fileInput" multiple accept="audio/mp3">
+</div>
+
+<script src="script33.js"></script>
+</body>
+</html>

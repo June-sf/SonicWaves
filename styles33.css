@@ -1,0 +1,198 @@
+/* 基础样式 */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(145deg, #f2f3f7, #ffffff);
+    color: #1c1c1e;
+    text-align: center;
+    padding: 60px 20px;
+    transition: background 0.5s ease;
+}
+
+/* 主播放器容器 */
+.player {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    display: inline-block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* 背景装饰光晕 */
+.player::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8), transparent 60%);
+    transform: rotate(25deg);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* 标题 */
+.player h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1c1c1e;
+}
+
+/* 文件上传按钮 */
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    background-color: #f0f0f5;
+    color: #555;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+    background-color: #e0e0eb;
+}
+
+/* 音频控件样式 */
+audio {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    outline: none;
+}
+
+/* 控制按钮 */
+button {
+    background-color: #f0f0f5;
+    color: #333;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 8px;
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.05);
+}
+
+button:hover {
+    background-color: #e0e0eb;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 播放列表标题 */
+h3 {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* 播放列表 */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-height: 180px;
+    overflow-y: auto;
+    border-radius: 12px;
+    padding: 10px 0;
+    background-color: #f8f8fb;
+    width: 90%;
+    transition: background-color 0.3s ease;
+}
+
+li {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #444;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+
+li:hover {
+    background-color: #efeff4;
+}
+
+li.active {
+    color: #007aff;
+    font-weight: 600;
+    background-color: #ebebf6;
+}
+
+/* 滚动条美化（仅限 Webkit 浏览器） */
+ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+#searchBar {
+    width: calc(100% - 40px);
+    padding: 12px 16px;
+    font-size: 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background-color: #f8f8fb;
+    margin-bottom: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#searchBar:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+}
+
+.speech-btn {
+    display: inline-block;
+    background-color: #ffe0e0;
+    color: #d3aa2f;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+.speech-btn:hover {
+    background-color: #ffcdd2;
+}
+.gesture-btn {
+    display: inline-block;
+    background-color: #e0f7fa;
+    color: #00796b;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: default;
+    margin-top: 8px;
+    font-style: italic;
+    opacity: 0.8;
+}

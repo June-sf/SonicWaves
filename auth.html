@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>登录 / 注册</title>
+    <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+
+<div class="container" id="container">
+
+    <!-- 登录表单 -->
+    <div class="form-container login-container">
+        <form id="loginForm">
+            <h2>欢迎回来</h2>
+            <input type="text" id="loginUsername" placeholder="用户名" required />
+            <input type="password" id="loginPassword" placeholder="密码" required />
+            <button type="submit">登录</button>
+        </form>
+    </div>
+
+    <!-- 注册表单 -->
+    <div class="form-container register-container">
+        <form id="registerForm">
+            <h2>加入我们</h2>
+            <input type="text" id="regUsername" placeholder="用户名" required />
+            <input type="password" id="regPassword" placeholder="密码" required />
+            <button type="submit">注册</button>
+        </form>
+    </div>
+
+    <!-- 切换面板 -->
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h2>已有账号？</h2>
+                <p>点击登录进入系统</p>
+                <button id="signIn">登录</button>
+            </div>
+            
+            <div class="overlay-panel overlay-right">
+                <h2>没有账号？</h2>
+                <p>立即注册开启体验</p>
+                <button id="signUp">注册</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>
